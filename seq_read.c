@@ -36,6 +36,6 @@ int main(int argc, char* argv[]) {
   int num_passes = (1L<<28) / num_entries;
   num_passes = num_passes > 0 ? num_passes : 1;
   cycles = run((struct l*)array, num_passes);
-  printf("cycles = %llu, cycles/op = %lf\n", cycles, (double)cycles/(1 << 28));
+  printf("%llu,%llu,%lf\n", struct_size, wss, (double)cycles/(1 << 28));
   return 0;
 }
