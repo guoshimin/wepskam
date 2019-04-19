@@ -39,3 +39,13 @@ wss=2^35: cycles = 18054295443, cycles/op = 67.257492
 ![my result](seq_read.png)
 
 Compared to the author, the cycles/op held constant for longer.
+
+To compare multiple elem sizes, the author has
+
+![Figure 3.11: Sequential Read for Several Sizes](https://static.lwn.net/images/cpumemory/cpumemory.23.png)
+
+(https://lwn.net/Articles/252125/, Figure 3.11)
+
+I have
+
+![my result](seq_read_multiple_elem_sizes.png)
