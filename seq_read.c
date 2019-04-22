@@ -35,7 +35,8 @@ int main(int argc, char* argv[]) {
   ((struct l*) (array + (num_entries - 1)*struct_size))->n = NULL;
   int num_passes = (1L<<28) / num_entries;
   num_passes = num_passes > 0 ? num_passes : 1;
+  unsigned long long  num_ops = num_passes * num_entries;
   cycles = run((struct l*)array, num_passes);
-  printf("%llu,%llu,%lf\n", struct_size, wss, (double)cycles/(1 << 28));
+  printf("%llu,%llu,%lf\n", struct_size, wss, (double)cycles/num_ops);
   return 0;
 }
